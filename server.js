@@ -25,6 +25,9 @@ fs.readFile('./public/index.html', 'utf8', (err, data) => {
         res.setHeader('Content-Type', 'text/html');
         res.end(data);
     })
+    server.listen(port, () => {
+        console.log('Server listening on port ' + port);
+    })
 })
 // Define a const `server` as an arrow function using http.createServer. 
 // Use the documentation for the node.js http module. 
@@ -34,7 +37,4 @@ fs.readFile('./public/index.html', 'utf8', (err, data) => {
 // 3. end with the data that you are reading in from ./public/index.html.
 // Start the `server` const listening on the port defined by argument in your `port` const. 
 // Put the exact message `Server listening on port ${port}` on the console log. 
-server.listen(port, () => {
-    console.log('Server listening on port '+port);
-})
 // That's it! You're all done!
